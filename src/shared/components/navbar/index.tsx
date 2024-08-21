@@ -38,7 +38,7 @@ function Navbar() {
             leaveTo="transform -translate-x-full"
             show={menu}
           >
-            <div className="absolute z-50 ml-5 mt-7">
+            <div className="absolute z-50 ml-10 mt-7">
               <div className="flex items-center justify-center  flex-col gap-y-16 text-white text-[16px]">
                 <Link to={"/about"}>About</Link>
                 <Link to={"/about"}>Services</Link>

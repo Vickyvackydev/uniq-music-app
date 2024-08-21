@@ -33,7 +33,7 @@ function HeroSection() {
               }}
             ></div>
             <motion.div
-              className="relative z-10 flex mt-[6rem] lg:mr-14 mr-6 flex-col lg:items-end items-center justify-center gap-0"
+              className="relative z-10 flex mt-[6rem] lg:mr-14 mr-0 flex-col lg:items-end items-center justify-center gap-0"
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false }}
@@ -60,7 +60,7 @@ function HeroSection() {
             </motion.div>
 
             <motion.div
-              className="flex justify-between items-center lg:flex-row flex-col px-12 z-10 relative mt-[20rem]"
+              className="flex justify-between items-center lg:flex-row flex-col px-12 z-10 relative mt-[20rem] lg:ml-0 ml-8 "
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false }}
@@ -77,7 +77,7 @@ function HeroSection() {
                 viewport={{ once: false }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <Button text="Explore" btnstyle="lg:mt-0 mt-6" />
+                <Button text="Explore" btnstyle="lg:mt-0 mt-6 lg:mr-0 mr-4" />
               </motion.div>
             </motion.div>
           </div>
@@ -97,7 +97,7 @@ function HeroSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative z-10 flex mt-[6rem] mr-14 flex-col items-end justify-center gap-0"
+              className="relative z-10 flex mt-[6rem] lg:mr-14 mr-8 flex-col items-end justify-center gap-0"
             >
               <motion.span
                 initial={{ opacity: 0, x: -100 }}
@@ -123,7 +123,7 @@ function HeroSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="flex justify-between lg:flex-row flex-col items-center px-12 z-10 relative mt-[20rem]"
+              className="flex justify-between lg:flex-row flex-col items-center px-12 z-10 relative mt-[20rem] lg:ml-0 ml-8 "
             >
               <span className="lg:w-[360px] w-[280px] lg:text-left text-center text-[16px] break-words text-white ">
                 We're all about celebrating music in its purest form. We believe
@@ -136,7 +136,7 @@ function HeroSection() {
                 viewport={{ once: false }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <Button text="Explore" btnstyle="lg:mt-0 mt-6" />
+                <Button text="Explore" btnstyle="lg:mt-0 mt-6 lg:mr-0 mr-4" />
               </motion.div>
             </motion.div>
           </div>
@@ -156,7 +156,7 @@ function HeroSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative z-10 flex mt-[6rem] mr-14 flex-col items-end justify-center gap-0"
+              className="relative z-10 flex mt-[6rem] lg:mr-14 mr-9 flex-col items-end justify-center gap-0 "
             >
               <motion.span
                 initial={{ opacity: 0, x: -100 }}
@@ -182,7 +182,7 @@ function HeroSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="flex justify-between lg:flex-row flex-col items-center px-12 z-10 relative mt-[20rem]"
+              className="flex justify-between lg:flex-row flex-col items-center px-12 z-10 relative mt-[20rem] lg:ml-0 ml-8"
             >
               <span className="lg:w-[360px] w-[280px] lg:text-left text-center text-[16px] break-words text-white ">
                 We're all about celebrating music in its purest form. We believe
@@ -195,7 +195,7 @@ function HeroSection() {
                 viewport={{ once: false }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <Button text="Explore" btnstyle="lg:mt-0 mt-6" />
+                <Button text="Explore" btnstyle="lg:mt-0 mt-6 lg:mr-0 mr-4" />
               </motion.div>
             </motion.div>
           </div>
@@ -224,8 +224,9 @@ function HeroSection() {
   @media (min-width: 768px) {
     .swiper-button-next,
     .swiper-button-prev {
-      margin-left: 50px;
-      margin-right: 50px;
+       margin-left: 20px;
+       margin-right: 20px;
+      
     }
   }
 
