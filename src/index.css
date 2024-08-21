@@ -15,6 +15,48 @@ body {
   font-optical-sizing: auto;
 }
 
+.border-gradient {
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    270deg,
+    #732982 0%,
+    #24408e 27.5%,
+    #008026 63%,
+    #ffed00 79.5%,
+    #ff8c00 90.97%,
+    #e40303 100%
+  );
+}
+
+@keyframes fill-border {
+  0% {
+    border-image-source: linear-gradient(
+      270deg,
+      #732982 0%,
+      #24408e 0%,
+      #008026 0%,
+      #ffed00 0%,
+      #ff8c00 0%,
+      #e40303 0%
+    );
+  }
+  100% {
+    border-image-source: linear-gradient(
+      270deg,
+      #732982 0%,
+      #24408e 27.5%,
+      #008026 63%,
+      #ffed00 79.5%,
+      #ff8c00 90.97%,
+      #e40303 100%
+    );
+  }
+}
+
+.animate-fill-border {
+  animation: fill-border 2s forwards;
+}
+
 ::-webkit-scrollbar {
   width: 0;
   display: none;

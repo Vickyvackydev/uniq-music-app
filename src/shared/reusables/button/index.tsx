@@ -6,9 +6,11 @@ function Button(props: ButtonPropertyTypes) {
     <button
       type="button"
       onClick={props.handleClick}
-      className={`w-[220px] h-[48px] border  ${
+      className={`w-[220px] h-[48px] border relative  ${
         props.textColor || "text-white"
-      } flex items-center gap-3  justify-center rounded-sm ${props.btnstyle}`}
+      } flex items-center gap-3  justify-center rounded-sm ${
+        props.btnstyle
+      } hover:scale-110 transition-all duration-300 `}
     >
       <span className={`text-[16px] `}>{props.text}</span>
       <img
