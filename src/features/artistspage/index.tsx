@@ -37,11 +37,11 @@ const artstslist = [
 ];
 function ArtistPage() {
   return (
-    <main className="px-14 py-16">
-      <div className="flex justify-between items-center">
+    <main className="lg:px-14 px-5 py-16">
+      <div className="flex justify-between lg:items-center items-start lg:gap-0 gap-5 lg:flex-row flex-col">
         <div className="flex flex-col gap-3">
           <span className="text-[#979797] text-[16px]">Our Artists</span>
-          <span className="text-[64px] text-black font-extrabold leading-[65px] largeText">
+          <span className="lg:text-[64px] text-[40px] text-black font-extrabold lg:leading-[65px] leading-tight largeText">
             AMAZING <br /> UNIQ{" "}
             <span
               className="bg-clip-text text-transparent"
@@ -53,7 +53,7 @@ function ArtistPage() {
               STARS
             </span>
           </span>
-          <span className="w-[480px] break-words text-[#616161] text-[16px]">
+          <span className="lg:w-[480px] w-[280px] break-words text-[#616161] text-[16px]">
             Meet the game-changers. Our artists are not just performers, they’re
             storytellers, visionaries, and trendsetters. From rap to rock, pop
             to hip-hop, get to know the faces behind the beats.
@@ -66,7 +66,7 @@ function ArtistPage() {
           svgIcon="/svg/arrow-right-black.svg"
         />
       </div>
-      <div className="grid grid-cols-4 gap-5 mt-12">
+      <div className="grid lg:grid-cols-4 grid-cols-1 gap-5 mt-12">
         {artstslist.map((lists) => (
           <div className="flex flex-col gap-5">
             <div className="w-[292px] h-[420px]">

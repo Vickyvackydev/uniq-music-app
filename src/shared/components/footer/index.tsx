@@ -26,7 +26,7 @@ const FooterColumns = ({
 function Footer() {
   return (
     <footer
-      className="w-full h-[647px] bg-cover relative px-[4rem] py-[6rem]"
+      className="w-full lg:h-[647px] h-full bg-cover relative lg:px-[4rem] px-5 py-[6rem]"
       style={{
         backgroundImage: "url('/svg/laptop-bg.jpeg')",
         backgroundPositionY: "-800px",
@@ -34,7 +34,7 @@ function Footer() {
     >
       <div className="bg-[#1E1E1EE5] absolute inset-0"></div>
       <div className="relative z-10">
-        <div className="flex items-start gap-[13rem]">
+        <div className="flex items-start lg:gap-[13rem] gap-[6rem] lg:flex-row flex-col">
           <FooterColumns
             title={footerLinks[0].title}
             links={footerLinks[0].links}
@@ -68,9 +68,9 @@ function Footer() {
           </div>
         </div>
         <hr className="my-16" />
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between lg:flex-row flex-col lg:items-center items-start lg:gap-0 gap-10">
           <img src="/svg/logo.svg" alt="" />
-          <span className="text-[#D9D9D9] font-normal text-[16px]">
+          <span className="text-[#D9D9D9] font-normal lg:text-[16px] text-xs">
             All Right Reserved. Chibuzo Anthony for Uxcel, 2024
           </span>
           <div className="flex items-center gap-2">

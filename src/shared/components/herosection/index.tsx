@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../navbar";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { motion } from "framer-motion";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
@@ -12,7 +12,7 @@ import Button from "shared/reusables/button";
 
 function HeroSection() {
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <Navbar />
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
@@ -23,7 +23,7 @@ function HeroSection() {
         className="h-full"
       >
         <SwiperSlide>
-          <div className="h-[720px] ">
+          <div className="h-[720px] lg:w-full w-[335px] lg:pt-[8rem] pt-0">
             <div
               className="absolute inset-0 bg-cover bg-center "
               style={{
@@ -32,29 +32,58 @@ function HeroSection() {
                 backgroundBlendMode: "overlay",
               }}
             ></div>
-            <div className="relative z-10 flex mt-[6rem] mr-14 flex-col items-end justify-center gap-0">
-              <span className="text-[150px] largeText font-extrabold text-white ">
+            <motion.div
+              className="relative z-10 flex mt-[6rem] lg:mr-14 mr-6 flex-col lg:items-end items-center justify-center gap-0"
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <motion.span
+                className="lg:text-[150px] text-3xl largeText font-extrabold text-white lg:text-right text-center"
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
                 UNIQ RECORDS
-              </span>
-              <span className="italic text-[20px] text-white mt-[-3rem]">
+              </motion.span>
+              <motion.span
+                className="italic lg:text-[20px] text-sm text-white  lg:mt-10 mt-0"
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
                 ...freshest sounds, hottest artists
-              </span>
-            </div>
+              </motion.span>
+            </motion.div>
 
-            <div className="flex justify-between items-center px-12 z-10 relative mt-[20rem]">
-              <span className="w-[360px] text-[16px] break-words text-white ">
+            <motion.div
+              className="flex justify-between items-center lg:flex-row flex-col px-12 z-10 relative mt-[20rem]"
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <span className="lg:w-[360px] w-[280px] lg:text-left text-center text-[16px] break-words text-white">
                 We're all about celebrating music in its purest form. We believe
                 that every artist has a unique voice that deserves to be heard.
               </span>
 
-              <div>
-                <Button text="Explore" />
-              </div>
-            </div>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                <Button text="Explore" btnstyle="lg:mt-0 mt-6" />
+              </motion.div>
+            </motion.div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[720px]">
+          <div className="h-[720px] lg:w-full w-[335px] lg:pt-[8rem] pt-0">
             <div
               className="absolute  bg-cover bg-center inset-0"
               style={{
@@ -63,28 +92,57 @@ function HeroSection() {
                 backgroundBlendMode: "overlay",
               }}
             ></div>
-            <div className="relative z-10 flex mt-[6rem] mr-14 flex-col items-end justify-center gap-0">
-              <span className="text-[150px] largeText font-extrabold text-white ">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="relative z-10 flex mt-[6rem] mr-14 flex-col items-end justify-center gap-0"
+            >
+              <motion.span
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="lg:text-[150px] text-3xl largeText font-extrabold text-white lg:text-right text-center"
+              >
                 RATED MUSICS
-              </span>
-              <span className="italic text-[20px] text-white mt-[-3rem]">
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="italic lg:text-[20px] text-sm  text-white lg:mt-10 mt-0"
+              >
                 ...top-rated sounds, reiging artists
-              </span>
-            </div>
-            <div className="flex justify-between items-center px-12 z-10 relative mt-[20rem]">
-              <span className="w-[360px] text-[16px] break-words text-white ">
+              </motion.span>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="flex justify-between lg:flex-row flex-col items-center px-12 z-10 relative mt-[20rem]"
+            >
+              <span className="lg:w-[360px] w-[280px] lg:text-left text-center text-[16px] break-words text-white ">
                 We're all about celebrating music in its purest form. We believe
                 that every artist has a unique voice that deserves to be heard.
               </span>
 
-              <div>
-                <Button text="Explore" />
-              </div>
-            </div>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                <Button text="Explore" btnstyle="lg:mt-0 mt-6" />
+              </motion.div>
+            </motion.div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[720px]">
+          <div className="h-[720px] lg:w-full w-[335px] lg:pt-[8rem] pt-0">
             <div
               className="absolute bg-cover bg-center inset-0"
               style={{
@@ -93,44 +151,102 @@ function HeroSection() {
                 backgroundBlendMode: "overlay",
               }}
             ></div>
-            <div className="relative z-10 flex mt-[6rem] mr-14 flex-col items-end justify-center gap-0">
-              <span className="text-[150px] largeText font-extrabold text-white ">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="relative z-10 flex mt-[6rem] mr-14 flex-col items-end justify-center gap-0"
+            >
+              <motion.span
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="lg:text-[150px] text-3xl largeText font-extrabold text-white lg:text-right text-center"
+              >
                 UNIQ SOUNDS
-              </span>
-              <span className="italic text-[20px] text-white mt-[-3rem]">
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="italic lg:text-[20px] text-sm text-white lg:mt-10 mt-0"
+              >
                 ...cool soundtracks, reiging artists
-              </span>
-            </div>
-            <div className="flex justify-between items-center px-12 z-10 relative mt-[20rem]">
-              <span className="w-[360px] text-[16px] break-words text-white ">
+              </motion.span>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="flex justify-between lg:flex-row flex-col items-center px-12 z-10 relative mt-[20rem]"
+            >
+              <span className="lg:w-[360px] w-[280px] lg:text-left text-center text-[16px] break-words text-white ">
                 We're all about celebrating music in its purest form. We believe
                 that every artist has a unique voice that deserves to be heard.
               </span>
 
-              <div>
-                <Button text="Explore" />
-              </div>
-            </div>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                <Button text="Explore" btnstyle="lg:mt-0 mt-6" />
+              </motion.div>
+            </motion.div>
           </div>
         </SwiperSlide>
         {/* <SwiperSlide></SwiperSlide> */}
       </Swiper>
       {/* Custom Styles for Swiper */}
       <style>{`
-        .swiper-button-next,
-        .swiper-button-prev {
-          color: white;
-           margin-left: 70px;
-          margin-right: 70px;
-        }
-        .swiper-pagination-bullet {
-          background-color: white;
-        }
-        .swiper-pagination-bullet-active {
-          background-color: white;
-          opacity: 1;
-        }
-      `}</style>
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: white;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: white;
+    opacity: 1;
+  }
+
+  /* Media query for screens wider than 768px */
+  @media (min-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  }
+
+  /* Media query for screens wider than 1024px */
+  @media (min-width: 1024px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      margin-left: 70px;
+      margin-right: 70px;
+    }
+  }
+
+  /* Media query for screens smaller than 768px */
+  @media (max-width: 767px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
+`}</style>
     </div>
   );
 }

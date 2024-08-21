@@ -1,3 +1,4 @@
+import { useMediaQuery } from "hooks";
 import React from "react";
 import Button from "shared/reusables/button";
 
@@ -20,12 +21,13 @@ const detailsLogs = [
   },
 ];
 function AboutPage() {
+  const mobileScreen = useMediaQuery("(max-width: 640px)");
   return (
-    <main className="my-[6rem] mx-[6rem]">
-      <div className="flex justify-between items-center">
-        <div className="flex flex-col ">
+    <main className="lg:my-[6rem] my-10 lg:mx-[6rem] mx-5">
+      <div className="flex justify-between lg:items-center items-start gap-6 lg:flex-row flex-col">
+        <div className="flex flex-col lg:gap-1 gap-4">
           <h6 className="text-[#979797] text-[16px]">About UniQ</h6>
-          <span className="text-[64px] font-extrabold largeText text-black leading-tight">
+          <span className="lg:text-[64px] text-2xl font-extrabold largeText text-black lg:leading-[65px] leading-none">
             EVERY BEAT HAS ITS <br /> OWN{" "}
             <span
               className="text-transparent bg-clip-text"
@@ -38,7 +40,7 @@ function AboutPage() {
               GROOVE{" "}
             </span>
           </span>
-          <span className="w-[480px] text-[16px] text-[#616161]">
+          <span className="lg:w-[480px] w-[300px] text-[16px] text-[#616161]">
             UniQ Records is not just a label, it's a movement. We amplify
             voices, drop the dopest tracks, and make sure the world hears unique
             sounds. We are the heartbeat of tomorrow’s music.
@@ -51,7 +53,7 @@ function AboutPage() {
           svgIcon="/svg/arrow-right-black.svg"
         />
       </div>
-      <div className="flex items-center gap-[5rem] mt-16">
+      <div className="flex items-center gap-[5rem] mt-16 lg:flex-row flex-col">
         {detailsLogs.map((data, index) => (
           <div className="flex items-center gap-[5rem]">
             <div className="flex items-start flex-col">
@@ -62,7 +64,7 @@ function AboutPage() {
                 {data.title}
               </span>
             </div>
-            {index !== 3 && (
+            {index !== 3 && !mobileScreen && (
               <img src="/svg/align.svg" alt="" height={1} width={1} />
             )}
           </div>

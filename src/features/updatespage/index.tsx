@@ -24,13 +24,13 @@ const upadtes = [
 
 function UpdatesPage() {
   return (
-    <main className="w-full px-[4rem] py-[5rem]">
-      <div className="flex justify-between items-center">
+    <main className="w-full lg:px-[4rem] px-5 py-[5rem]">
+      <div className="flex justify-between lg:items-center lg:flex-row flex-col items-start">
         <div className="flex flex-col gap-2 w-[480px]">
           <span className="text-[16px] font-normal text-[#979797]">
             Our Blog
           </span>
-          <span className="text-[64px] font-extrabold text-[#1E1E1E]  largeText  leading-[70px]">
+          <span className="lg:text-[64px] text-[40px] font-extrabold text-[#1E1E1E]  largeText  lg:leading-[70px] leading-tight">
             UNIQ NEWS &{" "}
             <span
               className="bg-clip-text text-transparent"
@@ -42,7 +42,7 @@ function UpdatesPage() {
               UPDATES
             </span>{" "}
           </span>
-          <span className="text-[16px] text-[#616161]">
+          <span className="text-[16px] text-[#616161] lg:w-full w-[280px]">
             Dive into the heartbeat of UniQ Records! From behind-the-scenes
             stories to the latest music trends, our blog is your all-access pass
             to the world of music.
@@ -51,25 +51,25 @@ function UpdatesPage() {
         <Button
           text="Visit Our Blog"
           svgIcon="/svg/arrow-right-black.svg"
-          btnstyle="border-[#616161]"
+          btnstyle="border-[#616161] lg:mt-0 mt-6"
           textColor="text-[#616161]"
         />
       </div>
-      <div className="flex items-center gap-5 mt-8">
+      <div className="flex items-center lg:flex-row flex-col gap-5 mt-8">
         {upadtes.map((data) => (
-          <div className="w-[397.33px]">
+          <div className="lg:w-[397.33px] w-full">
             <div className="">
               <img
                 src={data.displayImage}
                 alt=""
-                className="w-[397.33px] h-[240px]"
+                className="lg:w-[397.33px] w-full h-[240px]"
               />
             </div>
             <div className="mt-4 flex flex-col gap-3">
               <span className="text-[18px] font-semibold largeText text-[#1E1E1E]">
                 {data.title}
               </span>
-              <span className="w-[397px] text-[16px] text-[#8D8D8D]">
+              <span className="lg:w-[397px] w-full text-[16px] text-[#8D8D8D]">
                 {data.text}
               </span>
               <span className="text-[16px] text-[#1E1E1E]">{data.date}</span>

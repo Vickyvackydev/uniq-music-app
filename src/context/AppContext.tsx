@@ -7,28 +7,22 @@ import React, {
 
 interface AppQueryProps {
   // set params types for the context
-  filter: string;
-  setFilter: React.Dispatch<SetStateAction<string>>;
-  tab: string;
-  setTab: React.Dispatch<React.SetStateAction<string>>;
+  menu: boolean;
+  setMenu: React.Dispatch<SetStateAction<boolean>>;
 }
 
 const AppContext = createContext<AppQueryProps>({
   // define the context state
-  tab: "",
-  setTab: () => {},
-  filter: "",
-  setFilter: () => {},
+  menu: false,
+  setMenu: () => {},
 });
 
 export const ContextProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [tab, setTab] = useState<string>("lists");
-  const [filter, setFilter] = useState("");
-
+  const [menu, setMenu] = useState(false);
   return (
-    <AppContext.Provider value={{ tab, setTab, filter, setFilter }}>
+    <AppContext.Provider value={{ menu, setMenu }}>
       {children}
     </AppContext.Provider>
   );

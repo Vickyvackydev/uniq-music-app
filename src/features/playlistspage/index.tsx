@@ -1,3 +1,4 @@
+import { useMediaQuery } from "hooks";
 import React from "react";
 import Button from "shared/reusables/button";
 
@@ -34,18 +35,19 @@ const musiclists = [
   },
 ];
 function PlayListPage() {
+  const mobilescreen = useMediaQuery("(max-width: 640px)");
   return (
     <main
-      className="w-full h-full  bg-cover bg-center py-14 px-16"
+      className="w-full h-full  bg-cover bg-center py-14 lg:px-16 px-4"
       style={{
         backgroundImage: "url('/svg/head-phone-bg.jpeg')",
       }}
     >
-      <div className="flex justify-between items-start">
+      <div className="flex justify-between items-start lg:flex-row flex-col lg:gap-0 gap-5">
         <div>
           <div className="flex flex-col">
             <span className="text-[#979797] text-[16px] mb-3">Pride Month</span>
-            <span className="text-[64px] font-extrabold largeText text-[#1E1E1E] leading-[70px]">
+            <span className="lg:text-[64px] text-2xl font-extrabold largeText text-[#1E1E1E] lg:leading-[70px] leading-tight">
               UNIQ <br />
               CELEBRATES <br />
               <span
@@ -59,12 +61,12 @@ function PlayListPage() {
               </span>{" "}
             </span>
             <div className="flex flex-col gap-4 mt-2 text-[16px] text-[#616161]">
-              <span className="w-[360px] break-words">
+              <span className="lg:w-[360px] w-[280px] break-words">
                 Music is a universal language that transcends all boundaries.
                 We’re turning up the volume on love, diversity, and inclusivity.
                 Join us as we celebrate the LGBTQ+ community!
               </span>
-              <span className="w-[360px] break-words">
+              <span className="lg:w-[360px] w-[280px] break-words">
                 Join the conversation on social media using these hashtags
                 #PrideMonth #LoveIsLove #LGBTQ #LoveWins #PrideCelebration
               </span>
@@ -72,12 +74,12 @@ function PlayListPage() {
           </div>
           <Button
             text="Full Playlist"
-            btnstyle="border-black mt-[13rem]"
+            btnstyle="border-black lg:mt-[13rem] mt-[5rem]"
             svgIcon="/svg/arrow-right-black.svg"
             textColor="text-[#1E1E1E]"
           />
         </div>
-        <div className="w-[400px] h-[736px] px-8 bg-[#F7F7F7CC] bg-opacity-[80%] flex flex-col items-center gap-5 pt-6">
+        <div className="lg:w-[400px] w-full lg:h-[736px] h-full lg:pb-0 pb-4 px-8 bg-[#F7F7F7CC] bg-opacity-[80%] flex flex-col items-center gap-5 pt-6">
           <span className="largeText font-semibold">Recommended Playlist</span>
           <div className="w-full flex flex-col gap-5">
             {musiclists.map((lists) => (
@@ -86,8 +88,8 @@ function PlayListPage() {
                   <img
                     src={lists.displayImage}
                     alt=""
-                    width={100}
-                    height={100}
+                    width={mobilescreen ? 50 : 100}
+                    height={mobilescreen ? 50 : 100}
                   />
                   <div className="flex flex-col items-start">
                     <span className="font-semibold largeText text-[16px] text-[#1E1E1E]">

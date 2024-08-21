@@ -20,7 +20,7 @@ function App() {
         <Route element={<Homepage />} path="/" />
         {/* <Route element={<ViewPage />} path="/viewtask" /> */}
       </Routes>
-      <Toaster position="top-right" reverseOrder={false} />
+      {/* <Toaster position="top-right" reverseOrder={false} /> */}
     </>
   );
 }
